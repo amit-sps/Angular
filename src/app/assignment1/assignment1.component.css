@@ -1,0 +1,12 @@
+.as1Container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.as1Container button{
+    width: 60%;
+    padding: 70px;
+    border-radius: 10px;
+    font-size: 3rem;
+}

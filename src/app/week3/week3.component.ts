@@ -31,6 +31,6 @@ export class Week3Component {
 
 
   onSubmit() {
-    this.Users.push(this.user)
+    this.Users.push({...this.user})
   }
 }

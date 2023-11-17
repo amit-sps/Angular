@@ -1,13 +1,17 @@
-.week3Container{
-    height: 92.5vh;
+.week3Container {
+    height: auto;
     display: grid;
     grid-template-columns: 35% 1fr;
     gap: 1%;
     margin-top: 15px;
 }
 
-.productForm , .productList{
-/* background-color: antiquewhite; */
-padding: 5%;
-margin-top: 10%;
+.productForm {
+    /* background-color: antiquewhite; */
+    padding: 12%;
+    margin-top: 10%;
+}
+
+.productList {
+    margin-top: 10%;
 }

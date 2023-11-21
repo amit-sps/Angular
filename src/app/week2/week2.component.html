@@ -1,20 +1,21 @@
 <div class="week2Container">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Verified</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let user of users">
-            <th scope="row">{{user.id}}</th>
-            <td>{{user.name}}</td>
-            <td>{{user.email}}</td>
-            <td><input readonly type="checkbox" aria-label="Checkbox for following text input" [checked]="user.verified"></td>
-          </tr>
-        </tbody>
-      </table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Verified</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td><input readonly type="checkbox" aria-label="Checkbox for following text input" [checked]="user.verified">
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
+import { UsersService } from '../services/users.service';
+import { GET_USER } from '../interfaces/users.interfaces';
 
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  verified: boolean;
-}
 
 @Component({
   selector: 'app-week2',
@@ -13,10 +9,9 @@ interface User {
   styleUrls: ['./week2.component.css']
 })
 export class Week2Component {
+  constructor(
+    private readonly UserService:UsersService
+  ){}
   
-  users: User[] = [
-    { id: 1, name: 'Amit Thakur', email: 'amit@gmail.com', verified:false },
-    { id: 2, name: 'Nashra Mirza', email: 'nashra@gmail.com', verified:true },
-    { id: 3, name: 'Fazil Bhat', email: 'fazil@gmail.com',verified:true }
-  ]
+  users: GET_USER[] = this.UserService.getUsers();
 }

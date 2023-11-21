@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Assignment1Component } from './assignment1/assignment1.component';
 import { Week2Component } from './week2/week2.component';
 import { Week3Component } from './week3/week3.component';
+import { Week4pComponent } from './week4p/week4p.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
     path: 'week3',
     component: Week3Component,
   },
+  {
+    path: 'week4p',
+    component: Week4pComponent,
+  }
 ];
 
 @NgModule({

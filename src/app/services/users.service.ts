@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { GET_USER } from '../interfaces/users.interfaces';
 
 @Injectable({
@@ -11,9 +13,14 @@ export class UsersService {
     { id: 3, name: 'Fazil Bhat', email: 'fazil@gmail.com',verified:true }
   ]
 
-  constructor() { }
+  constructor(
+    private readonly http:HttpClient
+  ) { }
 
   getUsers():GET_USER[]{
     return this.users;
+  }
+  getUsersFromHttp():Observable<any>{
+    return this.http.get<any>("https://dummyjson.com/users?limit=30");
   }
 }

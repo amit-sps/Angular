@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Assignment1Component } from './assignment1/assignment1.component';
@@ -11,6 +11,8 @@ import { UserslistComponent } from './userslist/userslist.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { Week4pComponent } from './week4p/week4p.component';
+import { HttpInterceptors } from './services/http.interceptor';
+import { searchByEmailPipe } from './userslist/user-search-by-name.pipe';
 
 @NgModule({
   declarations: [
@@ -21,15 +23,13 @@ import { Week4pComponent } from './week4p/week4p.component';
     Week3Component,
     UserslistComponent,
     FooterComponent,
-    Week4pComponent
+    Week4pComponent,
+    searchByEmailPipe,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptors, multi: true },
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

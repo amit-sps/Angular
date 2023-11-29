@@ -14,7 +14,7 @@ export class Assignment1Component implements OnInit {
   constructor(){}
   
   ngOnInit(): void {
-   this.todayDate=new Date().toDateString();
+   this.todayDate=new Date().toLocaleString('en-US',{timeZone:'Asia/Kolkata'});
   }
 
 

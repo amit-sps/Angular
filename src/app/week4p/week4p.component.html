@@ -1,12 +1,13 @@
+<div class="search" style="padding: 8px;text-align: right;">
+    <input type="text" placeholder="Search by email" [(ngModel)]="searchByEmail" />
+</div>
 <div class="loading" *ngIf="isLoading; else table">
     <div class="loader"></div>
     <h3>Loading...</h3>
 </div>
 <ng-template #table>
     <div>
-        <div class="search" style="padding: 8px;text-align: right;">
-            <input type="text" placeholder="Search by email" [(ngModel)]="searchByEmail" />
-        </div>
+
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
@@ -31,4 +32,4 @@
             </tbody>
         </table>
     </div>
-    </ng-template>
+</ng-template>

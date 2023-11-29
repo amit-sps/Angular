@@ -8,11 +8,16 @@ import { UsersService } from '../services/users.service';
   styleUrls: ['./week4p.component.css'],
 })
 export class Week4pComponent implements OnInit {
-  constructor(private readonly http: HttpClient, private readonly user:UsersService) {}
+  constructor(
+    private readonly http: HttpClient,
+    private readonly user: UsersService
+  ) {}
   data: any = [];
   searchByEmail: string = '';
+  isLoading: boolean = false;
 
   ngOnInit(): void {
+    this.isLoading = true;
     // this.http.get<any>('https://dummyjson.com/users?limit=30').subscribe(
     //   (response) => {
     //     this.data = response?.users;
@@ -21,8 +26,9 @@ export class Week4pComponent implements OnInit {
     //     console.log(error);
     //   }
     // );
-    this.user.getUsersFromHttp().subscribe(response=>{
-     this.data= response?.users
-    })
+    this.user.getUsersFromHttp().subscribe((response) => {
+      this.isLoading = false;
+      this.data = response?.users;
+    });
   }
 }

@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { Week4pComponent } from './week4p/week4p.component';
 import { HttpInterceptors } from './services/http.interceptor';
 import { searchByEmailPipe } from './userslist/user-search-by-name.pipe';
+import { Week4Component } from './week4/week4.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { searchByEmailPipe } from './userslist/user-search-by-name.pipe';
     FooterComponent,
     Week4pComponent,
     searchByEmailPipe,
+    Week4Component,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [

@@ -1,5 +1,5 @@
 <div class="search" style="padding: 8px;text-align: right;">
-    <input type="text" placeholder="Search by email" [(ngModel)]="searchByEmail" />
+    <input type="text" placeholder="Search by email" (ngModel)="searchByEmail" />
 </div>
 <div class="loading" *ngIf="isLoading; else table">
     <div class="loader"></div>

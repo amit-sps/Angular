@@ -9,7 +9,8 @@ import { Week4pComponent } from './week4p/week4p.component';
 const routes: Routes = [
   {
     path: '',
-    component: Assignment1Component,
+    redirectTo: '/week1',
+    pathMatch: 'full',
   },
   {
     path: 'week1',

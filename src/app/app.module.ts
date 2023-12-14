@@ -14,6 +14,9 @@ import { Week4pComponent } from './week4p/week4p.component';
 import { HttpInterceptors } from './services/http.interceptor';
 import { searchByEmailPipe } from './userslist/user-search-by-name.pipe';
 import { Week4Component } from './week4/week4.component';
+import { Week5Component } from './week5/week5.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { Week4Component } from './week4/week4.component';
     Week4pComponent,
     searchByEmailPipe,
     Week4Component,
+    Week5Component,
+    UserDetailsComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [

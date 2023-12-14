@@ -13,7 +13,7 @@ export class Week4pComponent implements OnInit {
     private readonly user: UsersService
   ) {}
   data: any = [];
-  searchByEmail: string = '';
+  searchString: string = '';
   isLoading: boolean = false;
 
   ngOnInit(): void {

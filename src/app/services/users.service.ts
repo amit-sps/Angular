@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { GET_USER } from '../interfaces/users.interfaces';
+import { GET_USER, USER_TYPE } from '../interfaces/users.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +22,11 @@ export class UsersService {
   }
   getUsersFromHttp():Observable<any>{
     return this.http.get<any>("https://dummyjson.com/users?limit=30");
+  }
+  getAllUsers():Observable<USER_TYPE[]>{
+    return this.http.get<USER_TYPE[]>("https://jsonplaceholder.typicode.com/users");
+  }
+  getUserDetailsById(id:number):Observable<USER_TYPE>{
+    return this.http.get<USER_TYPE>(`https://jsonplaceholder.typicode.com/users/${id}`);
   }
 }

@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductsService {
+
+  apiUrl = 'https://api.escuelajs.co/api/v1/products/';
+  
   constructor(private readonly http: HttpClient) {}
 
   getProducts(search?: string): Observable<any> {
@@ -14,5 +17,9 @@ export class ProductsService {
         ? `https://dummyjson.com/products/`
         : `https://dummyjson.com/products/search?q=${search}`
     );
+  }
+
+  getProductsForSale(params: any): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl, { params });
   }
 }

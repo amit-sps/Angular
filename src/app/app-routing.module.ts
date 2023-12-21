@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Assignment1Component } from './assignment1/assignment1.component';
 import { AuthGuard } from './guard/auth.guard';
+import { RoleGuard } from './guard/role.guard';
 import { LoginComponent } from './login/login.component';
+import { ProductsaleComponent } from './productsale/productsale.component';
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { Week2Component } from './week2/week2.component';
 import { Week3Component } from './week3/week3.component';
@@ -44,13 +47,21 @@ const routes: Routes = [
   {
     path: 'week5/:id',
     component: UserDetailsComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard,RoleGuard]
   } 
   ,
   {
     path: 'login',
     component: LoginComponent,
-  } 
+  },
+  {
+    path:'unauthorized',
+    component: UnauthorizedComponent
+  },
+  {
+    path:'sale',
+    component: ProductsaleComponent
+  }
 ];
 
 @NgModule({

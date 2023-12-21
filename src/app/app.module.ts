@@ -17,6 +17,8 @@ import { Week4Component } from './week4/week4.component';
 import { Week5Component } from './week5/week5.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { LoginComponent } from './login/login.component';
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
+import { ProductsaleComponent } from './productsale/productsale.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { LoginComponent } from './login/login.component';
     Week5Component,
     UserDetailsComponent,
     LoginComponent,
+    UnauthorizedComponent,
+    ProductsaleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [

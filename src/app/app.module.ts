@@ -18,7 +18,7 @@ import { Week5Component } from './week5/week5.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { LoginComponent } from './login/login.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
-import { ProductsaleComponent } from './productsale/productsale.component';
+import { SalesModule } from './sales/module1.module';
 
 @NgModule({
   declarations: [
@@ -36,9 +36,8 @@ import { ProductsaleComponent } from './productsale/productsale.component';
     UserDetailsComponent,
     LoginComponent,
     UnauthorizedComponent,
-    ProductsaleComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, SalesModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptors, multi: true },
   ],

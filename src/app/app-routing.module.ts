@@ -4,7 +4,7 @@ import { Assignment1Component } from './assignment1/assignment1.component';
 import { AuthGuard } from './guard/auth.guard';
 import { RoleGuard } from './guard/role.guard';
 import { LoginComponent } from './login/login.component';
-import { ProductsaleComponent } from './productsale/productsale.component';
+import { ProductsaleComponent } from './sales/productsale/productsale.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { Week2Component } from './week2/week2.component';
@@ -60,7 +60,7 @@ const routes: Routes = [
   },
   {
     path:'sale',
-    component: ProductsaleComponent
+    loadChildren:()=>import("./sales/module1.module").then((m)=>m.SalesModule)
   }
 ];
 

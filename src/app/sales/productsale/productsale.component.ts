@@ -1,11 +1,11 @@
 import { Component, OnInit, } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
-import { ProductsService } from '../services/products.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-productsale',
   templateUrl: './productsale.component.html',
-  styleUrls: ['./productsale.component.css','../week4p/week4p.component.css']
+  styleUrls: ['./productsale.component.css','../../week4p/week4p.component.css']
 })
 export class ProductsaleComponent implements OnInit {
   filteredProducts: any[] = [];
